@@ -1,7 +1,7 @@
 {
+  "homepage": "https://mark-get.github.io/Todolist",
   "name": "todolist",
   "private": true,
-  "homepage": "https://mark-get.github.io",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
