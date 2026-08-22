@@ -1,8 +1,7 @@
-import { selectThemeMode, setIsLoggedInAC } from "@/app/app-slice"
+import { setIsLoggedInAC } from "@/app/app-slice"
 import { AUTH_TOKEN } from "@/common/constants"
 import { ResultCode } from "@/common/enums"
-import { useAppDispatch, useAppSelector } from "@/common/hooks"
-import { getTheme } from "@/common/theme"
+import { useAppDispatch } from "@/common/hooks"
 import {useLoginMutation } from "@/features/auth/api/authApi"
 import { type LoginInputs, loginSchema } from "@/features/auth/lib/schemas"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -17,7 +16,6 @@ import { Controller, type SubmitHandler, useForm } from "react-hook-form"
 import styles from "./Login.module.css"
 
 export const Login = () => {
-  const themeMode = useAppSelector(selectThemeMode)
   const [login] = useLoginMutation()
 
   const dispatch = useAppDispatch()
