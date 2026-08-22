@@ -1,9 +1,12 @@
 {
   "name": "todolist",
   "private": true,
+  "homepage": "https://mark-get.github.io/Todolist",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "pnpm build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite --port 3000",
     "build": "tsc -b && vite build",
     "test": "vitest",
@@ -29,6 +32,7 @@
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "@vitejs/plugin-react-swc": "3.10.2",
+    "gh-pages": "^6.3.0",
     "globals": "16.2.0",
     "prettier": "3.6.2",
     "typescript": "5.8.3",
