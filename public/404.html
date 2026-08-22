@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    const path = window.location.pathname
+    const repo = "/Todolist"
+
+    sessionStorage.redirect = path
+
+    window.location.replace(
+      repo + "/?/" + path.slice(repo.length).replace(/^\/+/, "")
+    )
+  </script>
+</head>
+<body></body>
+</html>
