@@ -6,11 +6,13 @@ import Grid from "@mui/material/Grid"
 
 export const Main = () => {
   const [addTodolist] = useAddTodolistMutation()
-
+  const createTodolist = (title: string) => {
+    addTodolist({title})
+  }
   return (
     <Container maxWidth={"lg"}>
       <Grid container sx={{ mb: "30px" }}>
-        <CreateItemForm onCreateItem={addTodolist} />
+        <CreateItemForm onCreateItem={createTodolist} />
       </Grid>
       <Grid container spacing={4}>
         <Todolists />
